@@ -12,7 +12,7 @@ func isUnique(str string) bool {
 	m := make(map[rune]int)
 	for _, i := range s {
 		_, err := m[i]
-		if (err == false) && (strings.Contains(letters, string(i))) {
+		if (err == false) && (strings.ContainsRune(letters, i)) {
 			m[i] = 1
 		} else if err == true {
 			return false
